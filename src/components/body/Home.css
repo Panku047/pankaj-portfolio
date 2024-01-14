@@ -1,0 +1,41 @@
+.main-home{
+    padding-top: 50px;
+    background-color: lightcyan;
+    height: 512px;
+}
+
+.home-left{
+    float: left;
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+.home-right{
+    float: right;
+}
+.my-pic{
+    height: 500px;
+    width: 400px;
+    position: relative;
+    right: 40px;
+    top: 10px;
+    border-radius: 10px;
+}
+
+.namaste{
+    font-size: xxx-large;
+    color: navy;
+    font-style: oblique;
+}
+.contact-btn{
+    text-transform: capitalize !important;
+    margin-top: 10px !important;
+}
+
+.my-details{
+    font-size: xxx-large;
+    color: #ff6666;
+    font-style: oblique;
+}
+
+
