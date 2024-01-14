@@ -1,14 +1,14 @@
 .main-home{
     padding-top: 50px;
     background-color: lightcyan;
-    height: 512px;
+    height: 535px;
 }
 
 .home-left{
     float: left;
     position: relative;
     left: 30px;
-    top: 10px;
+    top: 20px;
 }
 .home-right{
     float: right;
@@ -29,7 +29,7 @@
 }
 .contact-btn{
     text-transform: capitalize !important;
-    margin-top: 10px !important;
+    margin-top: 20px !important;
 }
 
 .my-details{

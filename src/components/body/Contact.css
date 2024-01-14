@@ -1,3 +1,32 @@
 #outlined-basic{
     width: 570px;
 }
+
+.cont-head{
+    text-align: center;
+}
+
+.cont-main{
+    background-color: aliceblue;
+    height: auto;
+}
+
+.input-field{
+    text-align: center;
+}
+.field-gap{
+    margin-right: 10px;
+}
+
+.name-email{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.name-field{
+    margin-right: 10px;
+}
+
+.send-btn{
+   margin: 20px !important;
+}

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -9,10 +9,11 @@ const Contact = () =>{
     const [isSendDisabled, setIsSendDisabled] = useState(true);
     const [message, setMessage] = useState('')
     const handleChange = (event) =>{
-        if(event.target.value.length > 0){
-            setIsSendDisabled(false)
+        if(event.target.value !== ''){
             setMessage(event.target.value)
+            setIsSendDisabled(false)
         }else{
+            setMessage('')
             setIsSendDisabled(true)
         }
     }
@@ -22,22 +23,33 @@ const Contact = () =>{
         setIsSendDisabled(true)
     }
     return(
-        <div id='contact'>
-            <TextField
-                    required
-                    id="outlined-required"
-                    label="Name"
-                />
-                <TextField
-                    required
-                    id="outlined-required"
-                    label="Email"
-                /><br />
+        <div id='contact' className="cont-main">
+            <div className="cont-head">
+                <h1 className="cont-me">
+                    Contact Me
+                </h1>
+            </div>
+            <div className="input-field">
+               <div className="name-email">
+                    <TextField
+                        className="name-field"
+                        required
+                        id="outlined-required"
+                        label="Name"
+                    />
+                <div className="field-gap"></div>
+                    <TextField
+                        className="email-field"
+                        required
+                        id="outlined-required"
+                        label="Email"
+                    />
+               </div>
                 <TextField 
                     multiline
                     maxRows={1}
                     id="outlined-basic" 
-                    label="Feel like reaching out? Drop me a line with your message" 
+                    label="Write your Message" 
                     variant="outlined" 
                     value={message}
                     onChange={handleChange}
@@ -45,10 +57,11 @@ const Contact = () =>{
                 <Button 
                     onClick={sendClicked}
                     disabled={isSendDisabled} 
-                    className="contact-btn" 
+                    className="send-btn" 
                     variant="contained">
                     Send
                 </Button>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,34 @@
+.skills-main{
+    background-color: whitesmoke;
+    height: 500px;
+}
+
+.skills{
+    text-align: center;
+}
+
+.tech-icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon-size{
+    height: 120px;
+}
+
+.react-name{
+    margin-left: 35px;
+}
+
+.next-name{
+    margin-left: 50px;
+}
+
+.java-script{
+    margin-left: 25px;
+}
+
+.tech-icons1{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -14,6 +14,7 @@ const Home = ({scrollToSection}) =>{
     const [hello, setHello] = useState('');
     const [myName, setMyName] = useState('');
     const [myDetails, setMyDetails] = useState('');
+    const [displayContactBtn, setDisplayContactBtn] = useState(false)
     useEffect(() => {
         let index = 0;
         const intervalId = setInterval(() => {
@@ -27,7 +28,7 @@ const Home = ({scrollToSection}) =>{
         // return () => {
         //   clearInterval(intervalId);
         // };
-    }, [HELLO]);
+    }, []);
     useEffect(() => {
         let index = 0;
         setTimeout(() =>{
@@ -43,7 +44,7 @@ const Home = ({scrollToSection}) =>{
         // return () => {
         //   clearInterval(intervalId);
         // };
-    }, [MY_NAME]);
+    }, []);
     useEffect(() => {
         let index = 0;
         setTimeout(() =>{
@@ -56,25 +57,31 @@ const Home = ({scrollToSection}) =>{
                 }
               }, 100);
         }, 3500)
-    }, [MY_DETAILS]);
+    }, []);
+
+    useEffect(() =>{
+        setTimeout(() =>{
+            setDisplayContactBtn(true)
+        },6500)
+    },[])
 
     return(
         <div className="main-home">
             <div className="home-left">
-                <h1 className="namaste">{HELLO}</h1>
-                <h1 className="namaste">{MY_NAME}</h1>
-                <h1 className="my-details">{MY_DETAILS}</h1>
-                <Button 
-                    // onClick={sendClicked}
-                    // disabled={isSendDisabled} 
-                    onClick={() => scrollToSection('contact')}
-                    className="contact-btn" 
-                    variant="contained">
-                    Contact Me
-                </Button>
+                <h1 className="namaste">{hello}</h1>
+                <h1 className="namaste">{myName}</h1>
+                <h1 className="my-details">{myDetails}</h1>
+                {displayContactBtn ?
+                    <Button
+                        onClick={() => scrollToSection('contact')}
+                        className="contact-btn" 
+                        variant="contained">
+                        Contact Me
+                    </Button> : '' 
+                }
             </div>
             <div className="home-right">
-                <img className="my-pic" src={MyPic} />
+                <img className="my-pic" src={MyPic} alt="My Pic"/>
             </div>
         </div>
     );

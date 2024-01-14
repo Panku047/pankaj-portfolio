@@ -3,6 +3,7 @@ import MyNavbar from "./header/MyNavbar";
 import About from "./body/About";
 import Contact from "./body/Contact";
 import Footer from "./footer/Footer";
+import Skills from "./body/Skills";
 
 const Layout = () =>{
     const scrollToSection = (sectionId) => {
@@ -17,6 +18,7 @@ const Layout = () =>{
         <div>
             <MyNavbar scrollToSection={scrollToSection}  />
             <About scrollToSection={scrollToSection} />
+            <Skills />
             <Contact />
             <Footer />
         </div>

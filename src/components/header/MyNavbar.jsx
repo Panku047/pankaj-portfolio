@@ -6,7 +6,7 @@ const MyNavbar = ({scrollToSection}) =>{
         <div className="nav">
             <div class="topnav">
                 <a onClick={() => scrollToSection('about')}>About</a>
-                <a href="#news">Skills</a>
+                <a onClick={() => scrollToSection('skills')}>Skills</a>
                 <a href="#contact">Experience</a>
                 <a href="#about">Project</a>
                 <a href="#contact">Interest</a>
