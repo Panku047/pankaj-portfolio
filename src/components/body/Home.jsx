@@ -24,7 +24,7 @@ const Home = ({scrollToSection}) =>{
             } else {
               clearInterval(intervalId);
             }
-          }, 100);
+          }, 30);
         // return () => {
         //   clearInterval(intervalId);
         // };
@@ -39,8 +39,8 @@ const Home = ({scrollToSection}) =>{
                 } else {
                   clearInterval(intervalId);
                 }
-              }, 100);
-        },1000)
+              }, 30);
+        },500)
         // return () => {
         //   clearInterval(intervalId);
         // };
@@ -55,14 +55,14 @@ const Home = ({scrollToSection}) =>{
                 } else {
                   clearInterval(intervalId);
                 }
-              }, 100);
-        }, 3500)
+              }, 30);
+        }, 1000)
     }, []);
 
     useEffect(() =>{
         setTimeout(() =>{
             setDisplayContactBtn(true)
-        },6500)
+        },1500)
     },[])
 
     return(

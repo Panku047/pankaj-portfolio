@@ -1,0 +1,7 @@
+.exp-main{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    height: 540px;
+    padding-top: 60px;
+}

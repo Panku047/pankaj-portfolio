@@ -1,6 +1,8 @@
 import React from "react";
+
 import Home from "./Home";
 import './About.css'
+
 
 const About = ({scrollToSection}) =>{
     return(
